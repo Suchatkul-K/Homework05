@@ -1,0 +1,109 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global setting */
+body {
+    font-family: 'Prompt', sans-serif;
+    width: 1920px;
+    height: 1080px;
+    background-image: url(./pics/background.jpg);
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 139, 0.547);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0px 120px;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* header */
+header {
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding-top: 40px;
+}
+
+/* main */
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 360px;
+}
+main > p {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.loadbar > p {
+    padding-left: 352px;
+}
+.loadbar > button {
+    min-width: 520px;
+    min-height: 24px;
+}
+.loadbar > .scale {
+    display: flex;
+    justify-content: space-between;
+}
+.loadbar .greenbar {
+    display: hidden;
+    position: absolute;
+    left: 700px;
+    z-index: 2;
+    min-width: 364px;
+    background-color: greenyellow;
+}
+
+.noti {
+    min-width: 144px;
+    padding: 12px;
+    background-color: rgba(252,238,196,255);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+main > button:hover {  
+    background-color: rgba(208,189,170,255);
+    /* gradiant */
+}
+.contract {
+    display: flex;
+    gap: 16px;
+}
+.contract > a {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.756);
+    border-top: 1px solid rgba(255, 255, 255, 0.756);
+}
+footer > p {
+    padding: 8px;
+    text-align: center;
+}
