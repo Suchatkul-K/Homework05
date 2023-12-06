@@ -43,11 +43,50 @@ main {
 main > p {
     text-align: center;
     font-size: 4rem;
+    opacity: 0%;
+    animation: fade 1.6s;
+}
+@keyframes fade {
+    0% {opacity: 100%;}
+    /* 40% {opacity: 0%;} */
+    100% {opacity: 0%;}
+}
+
+main > .p1 {
+    position: absolute;
+    top: 380px;
+    opacity: 100%;
+    /* padding-left: 492px; */
+    animation: p1load 4s;
+    animation-timing-function: ease-in ;
 }
 
 .loadbar > p {
-    padding-left: 352px;
+    padding-left: 492px;
+    animation: load 4s;
+    animation-timing-function: ease-out ;
+    opacity: 0%;
+    /* content: 'calc(padding-left/492)'; */
 }
+@keyframes load {
+    0% {padding-left: 352px;opacity: 100%;}
+    /* 90% {opacity: 0%;} */
+    100% {padding-left: 492px; opacity: 0%;}
+}
+.loadbar > .p1 {
+    position: absolute;
+    top: 540px;
+    opacity: 100%;
+    padding-left: 492px;
+    animation: p1load 4s;
+    animation-timing-function: ease-in ;
+}
+@keyframes p1load {
+    0% {opacity: 0%;}
+    60% {opacity: 20%;}
+    100% {opacity: 100%;}
+}
+
 .loadbar > button {
     min-width: 520px;
     min-height: 24px;
@@ -57,12 +96,27 @@ main > p {
     justify-content: space-between;
 }
 .loadbar .greenbar {
-    display: hidden;
+    /* display: hidden; */
     position: absolute;
+    top: 560px;
     left: 700px;
     z-index: 2;
     min-width: 364px;
+    width: 520px;
+    min-height: 24px;
     background-color: greenyellow;
+    animation: loader 4s;
+    animation-timing-function: ease-out ;
+    /* animation-fill-mode: forwards; */
+}
+/* .loadbar .greenbar {
+    transform: scaleX(1.428);
+    transform-duration: 4s;
+} */
+
+@keyframes loader {
+    0% {width: 364px;}
+    100% {width: 520px;}
 }
 
 .noti {
